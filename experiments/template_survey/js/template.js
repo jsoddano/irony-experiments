@@ -18,7 +18,7 @@ function make_slides(f) {
       $(".err").hide();
       this.choice1 = $('input[name="choice-2"]:checked').val();
       this.choice2 = $('input[name="choice-3"]:checked').val();
-      this.comment = $('textarea[name="comment-1"]').val();
+      this.comment = $('textarea[name="comments"]').val();
       
       if (this.choice1 == undefined) {
         $("#err-1").show();
@@ -35,6 +35,35 @@ function make_slides(f) {
         "choice2" : this.choice2,
         "comment" : this.comment,
         "context" : exp.context,
+      });
+    }
+  });
+  
+  slides.second_trial = slide({
+    name: "second_trial",
+    start: function() {
+      $(".err").hide();
+    },
+    button : function() {
+      $(".err").hide();
+      this.choice3 = $('input[name="choice-4"]:checked').val();
+      this.choice4 = $('input[name="choice-5"]:checked').val();
+      this.comments = $('textarea[name="comment"]').val();
+      
+      if (this.choice3 == undefined) {
+        $("#err-3").show();
+      } else if(this.choice4 == undefined) {
+        $("#err-4").show();
+      } else {
+        this.log_responses();
+        exp.go();
+      }
+    },
+    log_responses : function() {
+      exp.data_trials.push({
+        "choice3" : this.choice3,
+        "choice4" : this.choice4,
+        "comments" : this.comments,
       });
     }
   });
