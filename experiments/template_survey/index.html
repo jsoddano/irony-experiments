@@ -79,7 +79,7 @@
 
   <div class="slide" id="single_trial">
 
-    <p>Answer two quick questions about the following situation:</p>
+    <p>Answer a few quick questions about the following situation:</p>
     <p>You and your friend, Mary, are frantically packing things to bring on a last-minute weekend camping trip.
         Your other friend, John, kindly offers to help run some errands for you both. You ask John to buy some apples 
         from the store. He agrees and shows up at your house with <span class="context">{{}}</span> apples. After he leaves, Mary turns to you and asks:
@@ -90,9 +90,9 @@
       <br />
 
       <p class="err" id="err-1">Please select an answer!</p>
-      <input type="radio" name='choice-2' id="radio-many" value="many"> <label for="radio-many">Mary thinks that John bought too <u>many</u> apples.</label>
+      <input type="radio" name='many' id="radio-many" value="many"> <label for="radio-many">Mary thinks that John bought too <u>many</u> apples.</label>
       <br />
-      <input type="radio" name='choice-2' id="radio-few" value="few"> <label for="radio-few">Mary thinks that John bought too <u>few</u> apples</label>
+      <input type="radio" name='few' id="radio-few" value="few"> <label for="radio-few">Mary thinks that John bought too <u>few</u> apples</label>
 
 
       <br>
@@ -117,7 +117,7 @@
          </p>
 
          <p><b>Comments?</b> Please enter any comments you have here...</p>
-         <p><textarea name="comment-1" style="width: 300px; height: 50px; border: 1px solid #000;"></textarea></p>
+         <p><textarea name="comments" style="width: 300px; height: 50px; border: 1px solid #000;"></textarea></p>
 
 
     <button onclick="_s.button()">Continue</button>
@@ -125,25 +125,19 @@
     
     <div class="slide" id="single_trial">
 
-    <p>Answer two quick questions about the following situation:</p>
-    <p>You and a friend are planning to go on a weekend camping trip.
-      Your friend goes to the store to buy things for the trip and decides to buy <span class="context">{{}}</span> apples.
-
-      <p><b>Please read the following <em>very</em> carefully:</b></p>
-      <p><em>You and a group of other people are taking this survey. Your goal is to select the option that the majority of the group will select. From below, please choose
-the option that you believe the majority of survey takers will choose: </em></p>
+      <p><em>Was Mary's remark sarcastic? </em></p>
 
       <br />
 
       <p class="err" id="err-1">Please select an answer!</p>
-      <input type="radio" name='choice-2' id="radio-many" value="many"> <label for="radio-many"><span class="context">{{}}</span> apples is too <u>many</u> apples to bring on a camping trip.</label>
+      <input type="radio" name='choice-2' id="radio-many" value="many"> <label for="radio-many">Yes</label>
       <br />
-      <input type="radio" name='choice-2' id="radio-few" value="few"> <label for="radio-few"><span class="context">{{}}</span> apples is too <u>few</u> apples to bring on a camping trip.</label>
+      <input type="radio" name='choice-2' id="radio-few" value="few"> <label for="radio-few">No</label>
 
 
       <br>
 
-     <p><b>How confident are you that you chose the option that most other survey-takers will choose?</b></p>
+     <p><b>How confident are you in the answer that you chose?</b></p>
        <p class="err" id="err-2">Please rate how confident you are in your answer</p>
        <p>
          <label>Very uncertain</label>
@@ -163,7 +157,7 @@ the option that you believe the majority of survey takers will choose: </em></p>
          </p>
 
          <p><b>Comments?</b> Please enter any comments you have here...</p>
-         <p><textarea name="comment-1" style="width: 300px; height: 50px; border: 1px solid #000;"></textarea></p>
+         <p><textarea name="sarc_comm" style="width: 300px; height: 50px; border: 1px solid #000;"></textarea></p>
 
 
     <button onclick="_s.button()">Continue</button>
