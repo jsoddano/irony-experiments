@@ -20,9 +20,9 @@ function make_slides(f) {
       this.manyconfidence = $('input[name="choice-3"]:checked').val();
       this.firstcomment = $('textarea[name="comments"]').val();
       
-      if (this.choice1 == undefined) {
+      if (this.many == undefined) {
         $("#err-1").show();
-      } else if(this.choice2 == undefined) {
+      } else if(this.manyconfidence == undefined) {
         $("#err-2").show();
       } else {
         this.log_responses();
@@ -47,12 +47,12 @@ function make_slides(f) {
     button : function() {
       $(".err").hide();
       this.sarcasm = $('input[name="choice-4"]:checked').val();
-      this.sarcconf = $('input[name="choice-5"]:checked').val();
+      this.saconf = $('input[name="choice-5"]:checked').val();
       this.secondcomment = $('textarea[name="comment"]').val();
       
-      if (this.choice3 == undefined) {
+      if (this.sarcasm == undefined) {
         $("#err-3").show();
-      } else if(this.choice4 == undefined) {
+      } else if(this.saconf == undefined) {
         $("#err-4").show();
       } else {
         this.log_responses();
@@ -62,7 +62,7 @@ function make_slides(f) {
     log_responses : function() {
       exp.data_trials.push({
         "sarcasm" : this.sarcasm,
-        "sarcconf" : this.sarcconf,
+        "saconf" : this.sarcconf,
         "secondcomment" : this.secondcomment,
       });
     }
