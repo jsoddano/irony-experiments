@@ -16,9 +16,9 @@ function make_slides(f) {
     },
     button : function() {
       $(".err").hide();
-      this.choice1 = $('input[name="choice-2"]:checked').val();
-      this.choice2 = $('input[name="choice-3"]:checked').val();
-      this.comment = $('textarea[name="comments"]').val();
+      this.many = $('input[name="choice-2"]:checked').val();
+      this.manyconfidence = $('input[name="choice-3"]:checked').val();
+      this.firstcomment = $('textarea[name="comments"]').val();
       
       if (this.choice1 == undefined) {
         $("#err-1").show();
@@ -31,9 +31,9 @@ function make_slides(f) {
     },
     log_responses : function() {
       exp.data_trials.push({
-        "choice1" : this.choice1,
-        "choice2" : this.choice2,
-        "comment" : this.comment,
+        "many" : this.many,
+        "manyconfidence" : this.manyconfidence,
+        "firstcomment" : this.firstcomment,
         "context" : exp.context,
       });
     }
@@ -46,9 +46,9 @@ function make_slides(f) {
     },
     button : function() {
       $(".err").hide();
-      this.choice3 = $('input[name="choice-4"]:checked').val();
-      this.choice4 = $('input[name="choice-5"]:checked').val();
-      this.comments = $('textarea[name="comment"]').val();
+      this.sarcasm = $('input[name="choice-4"]:checked').val();
+      this.sarcconf = $('input[name="choice-5"]:checked').val();
+      this.secondcomment = $('textarea[name="comment"]').val();
       
       if (this.choice3 == undefined) {
         $("#err-3").show();
@@ -61,9 +61,9 @@ function make_slides(f) {
     },
     log_responses : function() {
       exp.data_trials.push({
-        "choice3" : this.choice3,
-        "choice4" : this.choice4,
-        "comments" : this.comments,
+        "sarcasm" : this.sarcasm,
+        "sarcconf" : this.sarcconf,
+        "secondcomment" : this.secondcomment,
       });
     }
   });
