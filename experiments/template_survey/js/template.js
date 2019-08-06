@@ -62,7 +62,7 @@ function make_slides(f) {
     log_responses : function() {
       exp.data_trials.push({
         "sarcasm" : this.sarcasm,
-        "saconf" : this.sacconf,
+        "saconf" : this.saconf,
         "secondcomment" : this.secondcomment,
       });
     }
